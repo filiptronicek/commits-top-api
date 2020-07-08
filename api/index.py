@@ -13,11 +13,12 @@ def getCommiters(u: str):
     count = htmlGH.select(".users-list > tr")
 
     r = []
-
     for i,c in enumerate(count):
         if i != 0:
             children = c.findAll("td" , recursive=False)
-            r.append({"rank": children[0].get_text().replace(".",""), "user": children[1].get_text(), "contributors": children[2].get_text()})
+            s = children[1].get_text()
+            username =  s[s.find('(')+1:s.find(')')]
+            r.append({"rank": children[0].get_text().replace(".",""), "user": {"username": username, "name": s.split(" ")[0]}, "contributors": children[2].get_text()})
     return '{"users": '+json.dumps(r)+"}"
 
 class handler(BaseHTTPRequestHandler):
