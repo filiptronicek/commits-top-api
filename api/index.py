@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import requests as req
 import re
+import json
 from http.server import BaseHTTPRequestHandler
 
 
@@ -17,7 +18,7 @@ def getCommiters(u: str):
         if i != 0:
             children = c.findAll("td" , recursive=False)
             r.append({"rank": children[0].get_text(), "user": children[1].get_text(), "contributors": children[2].get_text()})
-    return '{"users": '+r+"}"
+    return '{"users": '+json.dumps(r)+"}"
 
 class handler(BaseHTTPRequestHandler):
     def do_GET(self):
