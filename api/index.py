@@ -6,8 +6,8 @@ from http.server import BaseHTTPRequestHandler
 
 
 def getCommiters(u: str):
-    #usr = u.split("?c=")[1].split("HTTP")[0].replace(" ", "")
-    url = 'https://commits.top/czech_republic.html'
+    country = u.split("?c=")[1].split("HTTP")[0].replace(" ", "")
+    url = f'https://commits.top/{country}.html'
     resp = req.get(url)
     htmlGH = BeautifulSoup(resp.text, 'html.parser')
     count = htmlGH.select(".users-list > tr")
