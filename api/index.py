@@ -17,7 +17,7 @@ def getCommiters(u: str):
     for i,c in enumerate(count):
         if i != 0:
             children = c.findAll("td" , recursive=False)
-            r.append({"rank": children[0].get_text(), "user": children[1].get_text(), "contributors": children[2].get_text()})
+            r.append({"rank": children[0].get_text().replace(".",""), "user": children[1].get_text(), "contributors": children[2].get_text()})
     return '{"users": '+json.dumps(r)+"}"
 
 class handler(BaseHTTPRequestHandler):
