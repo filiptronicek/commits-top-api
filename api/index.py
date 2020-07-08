@@ -18,7 +18,7 @@ def getCommiters(u: str):
             children = c.findAll("td" , recursive=False)
             s = children[1].get_text()
             username =  s[s.find('(')+1:s.find(')')]
-            r.append({"rank": children[0].get_text().replace(".",""), "user": {"username": username, "name": s.split(" ")[0]}, "contributors": children[2].get_text()})
+            r.append({"rank": children[0].get_text().replace(".",""), "user": {"name": username, "username": s.split(" ")[0]}, "contributors": children[2].get_text()})
     return '{"users": '+json.dumps(r)+"}"
 
 class handler(BaseHTTPRequestHandler):
