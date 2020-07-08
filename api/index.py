@@ -5,7 +5,7 @@ from http.server import BaseHTTPRequestHandler
 
 
 def getCommiters(u: str):
-    usr = u.split("?c=")[1].split("HTTP")[0].replace(" ", "")
+    #usr = u.split("?c=")[1].split("HTTP")[0].replace(" ", "")
     url = 'https://commits.top/czech_republic.html'
     resp = req.get(url)
     htmlGH = BeautifulSoup(resp.text, 'html.parser')
@@ -17,7 +17,8 @@ def getCommiters(u: str):
         if i != 0:
             children = c.findAll("td" , recursive=False)
             r.append({"rank": children[0].get_text(), "user": children[1].get_text(), "contributors": children[2].get_text()})
-    return '{"users": '+r+"}"
+    #return '{"users": '+r+"}"
+    return u
 
 class handler(BaseHTTPRequestHandler):
     def do_GET(self):
