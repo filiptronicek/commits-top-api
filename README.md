@@ -1,5 +1,7 @@
 # Commits.top API
-## commits.top REST API
+An API to get rankings of the most active GitHub contributors by country. Use it to show your rank to other people, or just showoff, how active people from your country / any other are!
+
+Based on data from [lauripiispanen/most-active-github-users-counter](https://github.com/lauripiispanen/most-active-github-users-counter)
 
 Display how active you are on your website! (replace `czech_republic` with your country and `me.username` with your username!)
 ```js
