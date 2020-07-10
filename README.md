@@ -3,6 +3,10 @@ An API to get rankings of the most active GitHub contributors by country. Use it
 
 Based on data from [lauripiispanen/most-active-github-users-counter](https://github.com/lauripiispanen/most-active-github-users-counter)
 
+## HTTP Endpoint
+`GET`: `https://commiters.now.sh/rank/country`
+
+## JavaScript implementation
 Display how active you are on your website! (replace `czech_republic` with your country and `me.username` with your username!)
 ```js
 function getRank() {
