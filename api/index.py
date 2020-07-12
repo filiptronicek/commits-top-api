@@ -1,8 +1,9 @@
-import yaml
-import requests as req
-import re
 import json
+import re
 from http.server import BaseHTTPRequestHandler
+
+import requests as req
+import yaml
 
 
 def getCommiters(u: str):
