@@ -7,11 +7,15 @@ import yaml
 
 
 def getCommiters(u: str):
-    country = u.split("?c=")[1].split("HTTP")[0].replace(" ", "")
+    splitRequestLine = (u.split("?c=")[1].split("HTTP")[0].replace(" ", "")).split("&v=")
+    country = splitRequestLine[0]
+    visibility = splitRequestLine[1]
     url = f"https://raw.githubusercontent.com/lauripiispanen/github-top/master/_data/locations/{country}.yml"
     resp = req.get(url)
+
     if resp.status_code == 200:
         y = yaml.safe_load(resp.text)
+        #return u
         return '{"users": ' + json.dumps(y) + "}"
     elif resp.status_code == 404:
         return ('{"message": "Location not found. Take a look at /locations for the available locations"}')
