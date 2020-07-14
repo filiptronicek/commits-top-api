@@ -7,8 +7,9 @@ import yaml
 
 
 def getCommiters(u: str):
-    splitRequestLine = (u.split("?c=")[1].split(
-        "HTTP")[0].replace(" ", "")).split("&v=")
+    splitRequestLine = (u.split("?c=")[1].split("HTTP")[0].replace(" ", "")).split(
+        "&v="
+    )
     country = splitRequestLine[0]
     visibility = splitRequestLine[1]
     url = f"https://raw.githubusercontent.com/lauripiispanen/github-top/master/_data/locations/{country}.yml"
@@ -19,9 +20,11 @@ def getCommiters(u: str):
         # return u
         return '{"users": ' + json.dumps(y) + "}"
     elif resp.status_code == 404:
-        return ('{"message": "Location not found. Take a look at /locations for the available locations"}')
+        return '{"message": "Location not found. Take a look at /locations for the available locations"}'
     elif resp.status_code == 500:
-        return ('{"message": "An error occurred. A server one. Try again later, I guess."}')
+        return (
+            '{"message": "An error occurred. A server one. Try again later, I guess."}'
+        )
 
 
 class handler(BaseHTTPRequestHandler):
