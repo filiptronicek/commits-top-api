@@ -1,6 +1,7 @@
 {
     "routes": [
         {"src": "/rank/(?<id>[^/]*)", "dest": "/api?c=$id"},
+        {"src": "/rank/(?<id>[^/]*)/private", "dest": "/api?c=$id&v=private"},
         {"src": "/locations", "dest": "api/locations"}
     ]
 }
