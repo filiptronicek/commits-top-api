@@ -7,9 +7,8 @@ import yaml
 
 
 def getCommiters(u: str):
-    splitRequestLine = (u.split("?c=")[1].split("HTTP")[0].replace(" ", "")).split(
-        "&v="
-    )
+    splitRequestLine = (u.split("?c=")[1].split("HTTP")[0].replace(
+        " ", "")).split("&v=")
     country = splitRequestLine[0]
     visibility = splitRequestLine[1]
     url = f"https://raw.githubusercontent.com/lauripiispanen/github-top/master/_data/locations/{country}.yml"
