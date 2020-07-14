@@ -8,7 +8,6 @@ import yaml
 
 def getCommiters(u: str):
     country = u.split("?c=")[1].split("HTTP")[0].replace(" ", "")
-    country = "czech_republic"
     url = f"https://raw.githubusercontent.com/lauripiispanen/github-top/master/_data/locations/{country}.yml"
     resp = req.get(url)
     y = yaml.safe_load(resp.text)
