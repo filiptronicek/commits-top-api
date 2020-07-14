@@ -17,7 +17,7 @@ def getLocs():
 
     url = "https://api.github.com/repos/{}/{}/git/trees/master?recursive=2".format(
         user, repo)
-    headers = {"Authorization": getenv("TOKEN")}
+    headers = {"Authorization": f"token {getenv('TOKEN')}"}
     r = req.get(url, headers=headers)
     res = r.json()
 
