@@ -5,6 +5,8 @@ Based on data from [lauripiispanen/most-active-github-users-counter](https://git
 
 For the list of all the locations, see https://github.com/lauripiispanen/github-top/tree/master/_data/locations
 
+To list the locations in the API, use the `/locations` endpoint.
+
 ## HTTP Endpoint
 `GET`: [`https://commiters.now.sh/rank/country`](https://commiters.now.sh/rank/country)
 
