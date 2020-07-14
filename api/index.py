@@ -10,8 +10,14 @@ def getCommiters(u: str):
     country = u.split("?c=")[1].split("HTTP")[0].replace(" ", "")
     url = f"https://raw.githubusercontent.com/lauripiispanen/github-top/master/_data/locations/{country}.yml"
     resp = req.get(url)
-    y = yaml.safe_load(resp.text)
-    return '{"users": ' + json.dumps(y) + "}"
+    if resp.status_code == 200:
+        y = yaml.safe_load(resp.text)
+        return '{"users": ' + json.dumps(y) + "}"
+    elif resp.status_code == 404:
+        return ('{"message": "Location not found. Take a look at /locations for the available locations"}')
+    elif resp.status_code == 500:
+        return ('{"message": "An error occurred. A server one. Try again later, I guess."}')
+
 
 
 class handler(BaseHTTPRequestHandler):
