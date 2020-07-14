@@ -8,7 +8,7 @@ For the list of all the locations, see https://github.com/lauripiispanen/github-
 To list the locations in the API, use the [`/locations`](https://commiters.now.sh/locations) endpoint.
 
 ## HTTP Endpoint
-`GET`: [`https://commiters.now.sh/rank/country`](https://commiters.now.sh/rank/country)
+`GET`: [`https://commiters.now.sh/rank/country`](https://commiters.now.sh/rank/worldwide)
 
 ## JavaScript implementation
 Display how active you are on your website! (replace `czech_republic` with your country and `me.username` with your username!)
