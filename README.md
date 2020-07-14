@@ -3,6 +3,8 @@ An API to get rankings of the most active GitHub contributors by country. Use it
 
 Based on data from [lauripiispanen/most-active-github-users-counter](https://github.com/lauripiispanen/most-active-github-users-counter)
 
+For the list of all the locations, see https://github.com/lauripiispanen/github-top/tree/master/_data/locations
+
 ## HTTP Endpoint
 `GET`: [`https://commiters.now.sh/rank/country`](https://commiters.now.sh/rank/country)
 
