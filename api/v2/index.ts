@@ -13,7 +13,7 @@ const getLocation = async (location: string) => {
 const getAllLocations = async () => {
     const locationResponse = await fetch(`https://api.github.com/repos/${repo}/git/trees/master?recursive=2`);
     const locationResponseData = await locationResponse.json();
-    const locations = locationResponseData.tree.filter(item => item.path.includes("_data/locations/")).map(item => basename(item.path, "yml"));
+    const locations = locationResponseData.tree.filter(item => item.path.includes("_data/locations/")).map(item => basename(item.path, ".yml"));
 
     const endData = new Map<string, any>();
     for (const location of locations) {
