@@ -9,12 +9,10 @@
             "dest": "api/locations"
         }
     ],
-    "headers": {
-        "headers": [
-            {
-                "key": "Access-Control-Allow-Origin",
-                "value": "*"
-            }
-        ]
-    }
+    "headers": [
+        {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+        }
+    ]
 }
