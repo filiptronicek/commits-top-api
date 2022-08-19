@@ -1,8 +1,8 @@
 {
     "rewrites": [
         {
-            "source": "/rank/:id",
-            "destination": "/api?c=:id"
+            "source": "/rank/:id*",
+            "destination": "/api?c=:id*"
         },
         {
             "source": "/locations",
