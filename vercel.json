@@ -1,0 +1,21 @@
+{
+    "routes": [
+        {
+            "src": "/rank/(?<id>[^/]*)",
+            "dest": "/api?c=$id"
+        },
+        {
+            "src": "/locations",
+            "dest": "api/locations"
+        }
+    ],
+    "headers": {
+        "source": "/(.*)",
+        "headers": [
+            {
+                "key": "Access-Control-Allow-Origin",
+                "value": "*"
+            }
+        ]
+    }
+}
