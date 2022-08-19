@@ -5,7 +5,9 @@ import { basename } from 'path';
 const repo = "lauripiispanen/github-top";
 
 const getLocation = async (location: string) => {
-    return await fetch(`https://raw.githubusercontent.com/${repo}/master/_data/locations/${location}.yml`);
+    const url = `https://raw.githubusercontent.com/${repo}/master/_data/locations/${location}.yml`;
+    console.log("Requesting ", url)
+    return await fetch(url);
 }
 
 const getAllLocations = async () => {
