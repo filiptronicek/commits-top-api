@@ -33,7 +33,7 @@ const getAllLocations = async () => {
 
 export default async function handler(request, response) {
 
-    const location = request.location;
+    const { location } = request.query;
 
     if (location) {
         const commiterResponse = await getLocation(location);
