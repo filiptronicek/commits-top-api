@@ -18,8 +18,6 @@ def getCommiters(u: str):
     elif resp.status_code == 500:
         return ('{"message": "An error occurred. A server one. Try again later, I guess."}')
 
-
-
 class handler(BaseHTTPRequestHandler):
     def do_GET(self):
         self.send_response(200)
