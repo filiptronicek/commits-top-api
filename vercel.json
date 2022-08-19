@@ -1,12 +1,12 @@
 {
-    "routes": [
+    "rewrites": [
         {
-            "src": "/rank/(?<id>[^/]*)",
-            "dest": "/api?c=$id"
+            "source": "/rank/:id",
+            "destination": "/api?c=:id"
         },
         {
-            "src": "/locations",
-            "dest": "api/locations"
+            "source": "/locations",
+            "destination": "api/v2/locations"
         }
     ],
     "headers": [
