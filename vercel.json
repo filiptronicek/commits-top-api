@@ -1,6 +1,10 @@
 {
     "rewrites": [
         {
+            "source": "/rank/:location/:contributor",
+            "destination": "/api/v2/rank"
+        },
+        {
             "source": "/rank/:c",
             "destination": "/api"
         },
