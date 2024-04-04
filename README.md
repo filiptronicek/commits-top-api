@@ -1,4 +1,10 @@
 # Commits.top API
+
+> [!WARNING]
+> The repository and the corresponding APIs are deprecated, due to the [origin repository](https://github.com/lauripiispanen/most-active-github-users-counter) being archived in May of 2023.
+
+https://github.com/lauripiispanen/most-active-github-users-counter
+
 An API to get rankings of the most active GitHub contributors by country. Use it to show your rank to other people, or just showoff, how active people from your country / any other are!
 
 Based on data from [lauripiispanen/most-active-github-users-counter](https://github.com/lauripiispanen/most-active-github-users-counter)
